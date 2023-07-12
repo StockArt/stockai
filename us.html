@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Image Gallery</title>
+   <style>
+     body{
+       text-align: center;
+       box-sizing: border-box;
+       font-size: 30px;
+       align-content: center;
+       color: #fff;
+       background-color: #000;
+     }
+     h1{
+       letter-spacing: 2px;
+      word-spacing: 4px;
+     }
+      img{
+      
+       margin: auto;
+     }
+     #gallery{
+       position: relative;
+     }
+   
+   </style>
+</head>
+<body>
+   <h1 style="text-align: center">USA Nude Gallery <br><br></h1>
+   
+   <h2>Tap on images to view entire folder.
+   <br>Folder Images(600+)</h2>
+   <div id="gallery">
+   <a href="https://photos.app.goo.gl/Ftfvsq3FnqSGT5qcA">
+     <img id="russian" src="/albumfoto/usa/1689095012948.png" alt="">
+    </a>
+</div>
+<script>
+      var image = document.getElementById("russian");
+            var currentPos = 0;
+            var images = [
+              "/albumfoto/usa/1689095026141.png",
+"/albumfoto/usa/1689095745140.png",
+"/albumfoto/usa/1689095900265.png",
+"/albumfoto/usa/1689095904447.png",
+"/albumfoto/usa/1689095959834.png",
+"/albumfoto/usa/1689096347754.png",
+"/albumfoto/usa/1689096351998.png",
+"/albumfoto/usa/1689096360352.png"
+              ]
+
+            function volgendefoto() {
+                if (++currentPos >= images.length)
+                    currentPos = 0;
+
+                image.src = images[currentPos];
+            }
+
+            setInterval(volgendefoto, 1000);
+</script>
+ 
+ </div>
+</body>
+</html>
